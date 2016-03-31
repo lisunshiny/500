@@ -129,17 +129,8 @@
         top: -425px;
         z-index: -100;
       }
-
-      .robot {
-        width: 50px;
-        height: 47px;
-        background-size: 50px 47px;
-        position: absolute;
-        z-index: 3;
-        background-image: url(https://content.appboy.com/uploads/-MPG60Axy0GKQypftHDjqAcreature_2x.png);
-      }
-
       #canvas {
+
         position: absolute;
         top: 0;
         left: 0;
@@ -152,7 +143,7 @@
     <title></title>
   </head>
   <body>
-    <img src="slash.svg" alt="a slash" class="slash"/>
+    <img src="http://imgh.us/slash.svg" alt="a slash" class="slash"/>
     <canvas id="canvas"></canvas>
     <section>
       <h1>OH SNAP!</h1>
@@ -211,7 +202,7 @@
       var y = window.innerHeight * Math.random();
 
       var robot = new Image();
-      robot.src = 'creature.png';
+      robot.src = 'https://content.appboy.com/uploads/-MPG60Axy0GKQypftHDjqAcreature_2x.png';
 
       window.addEventListener('resize', resizeCanvas, false);
       window.requestAnimationFrame(draw);
