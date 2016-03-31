@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" href="https://www.appboy.com/favicon.ico" type="image/x-icon"/>
     <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/09c5f801-0d37-479d-aea3-ca82d9180c1e.css"/>
     <style media="screen">
       html {
@@ -111,14 +112,7 @@
         z-index: 100;
         background-repeat: no-repeat;
         background-size: 28px;
-      }
-
-      .sm-animated {
         background-image: url(https://media.giphy.com/media/3o7WTQdTtIx7Ios6eA/giphy.gif);
-      }
-
-      .sm-static {
-        background-image: url(https://content.appboy.com/uploads/aYLk7aLsP9HazvK5E_T9TQsmiley_static_2x.png);
       }
 
       .slash {
@@ -140,7 +134,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <meta charset="utf-8">
 
-    <title></title>
+    <title>Error</title>
   </head>
   <body>
     <img src="http://imgh.us/slash.svg" alt="a slash" class="slash"/>
@@ -162,7 +156,7 @@
 
         </div>
         <div class="smiley-container">
-          <div class="smiley sm-animated">
+          <div class="smiley">
 
           </div>
         </div>
@@ -175,17 +169,22 @@
   <script type="text/javascript">
     $(function() {
       var smile = function() {
-        $(".smiley").removeClass("sm-animated").addClass("sm-static");
+        $(".smiley").css("background-image", "url(" + "https://content.appboy.com/uploads/4zUy4oV7LsrzBzb4r0Zd4wstaticlogo_2x.png") + ")";
       };
-      window.setTimeout(smile, 3500);
+      window.setTimeout(smile, 3100);
 
       $(".logo-container").mouseenter(function() {
         var smiley = $(".smiley");
-        if ($(".sm-animated").length !== 0) {
+        if (/\.gif/.exec(smiley.css("background-image")) !== null) {
           return;
         }
-        $(".smiley").removeClass("sm-static").addClass("sm-animated");
-        window.setTimeout(smile, 3000);
+        var url = "https://media.giphy.com/media/3o7WTQdTtIx7Ios6eA/giphy.gif?p" + new Date().getTime();
+        var cssUrl = "url(" + url + ")"
+        var $img = $("<img>").attr("src", url)
+        $img.load(function() {
+          smiley.css("background-image", cssUrl);
+          window.setTimeout(smile, 3100);
+        })
       })
     })
   </script>
