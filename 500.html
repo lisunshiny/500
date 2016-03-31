@@ -209,10 +209,10 @@
         resizeCanvas();
 
         if (x > canvas.width) { // if moves off the right
-          y = canvas.width * Math.random(); // randomize y re-entry
+          y = canvas.height * Math.random(); // randomize y re-entry
           floatsRight = false; // float left
         } else if (x < farLeft) {
-          y = canvas.width * Math.random();
+          y = canvas.height * Math.random();
           floatsRight = true;
         }
 
