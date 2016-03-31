@@ -1,0 +1,131 @@
+html {
+  background: #1c222b;
+  color: white;
+  font-family: "Avenir Next Cyr W00 Ult Light";
+  text-align: center;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+section {
+  padding: 20px;
+}
+h1 {
+  font-size: 70px;
+  font-family: "AvenirNextLTW01-UltraLt_721293";
+  margin: 35px 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.links {
+  list-style: none;
+  margin: auto;
+  margin-top: 0px;
+  padding: 0;
+  width: 376px;
+  display: block;
+
+}
+
+.links li {
+  float: left;
+  display: block;
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    margin: 0;
+    font-size: 50px;
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .links {
+    width: auto;
+  }
+
+  .links li {
+    float: none;
+    margin: auto;
+    padding: 0;
+    padding-top: 20px;
+    display: block;
+  }
+}
+
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links li:first-child {
+  margin-left: 0;
+}
+
+.logo-container {
+  width: 162px;
+  height: 40px;
+  position: relative;
+  margin: auto;
+}
+
+.appboy-logo {
+  margin: 40px auto;
+  background-image: url(logo_white_copy.png);
+  width: 162px;
+  height: 40px;
+  background-size: 162px 40px;
+}
+
+.smiley {
+  -webkit-user-select: none;
+    cursor: zoom-in;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    z-index: 100;
+}
+
+.slash {
+  color: #fff200;
+  position: absolute;
+  width: 500px;
+  left: -50px;
+  top: -800px;
+  z-index: -100;
+}
+
+.robot {
+  width: 50px;
+  height: 47px;
+  background-size: 50px 47px;
+  position: absolute;
+  z-index: 3;
+  background-image: url(creature.png);
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

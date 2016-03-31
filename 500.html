@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/09c5f801-0d37-479d-aea3-ca82d9180c1e.css"/>
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <meta charset="utf-8">
+
+    <title></title>
+  </head>
+  <body>
+    <img src="slash.svg" alt="a slash" class="slash"/>
+    <canvas id="canvas"></canvas>
+    <section>
+      <h1>OH SNAP!</h1>
+      <p>
+        Sorry, Appboy is temporarily unavailable. We’re checking things brick by brick. We’ll be back shortly.
+      </p>
+
+      <ul class="links clearfix">
+        <li><a href="https://twitter.com/appboy">@appboy</a></li>
+        <li><a href="http://status.appboy.com/">Appboy Status</a></li>
+        <li><a href="https://community.appboy.com/appboy">Community</a></li>
+        <li><a href="mailto:support@appboy.com">Support</a></li>
+      </ul>
+      <div class="logo-container">
+        <div class="appboy-logo">
+
+        </div>
+        <div class="smiley-container">
+          <img class="smiley" src="smiley.gif">
+        </div>
+      </div>
+    </section>
+
+
+  </body>
+
+  <script type="text/javascript">
+    $(function() {
+      var smile = function() {
+        $(".smiley").attr("src", "smiley_static.png");
+      };
+      window.setTimeout(smile, 3500);
+
+      $(".logo-container").mouseenter(function() {
+        var smiley = $(".smiley");
+        if (smiley.attr("src") == "smiley.gif") {
+          return;
+        }
+        smiley.attr("src", "smiley.gif")
+        window.setTimeout(smile, 3000);
+      })
+    })
+  </script>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+      var canvas = document.getElementById("canvas");
+      var context = canvas.getContext('2d');
+
+      var farLeft = -100;
+      var floatsRight = true;
+      var x = farLeft;
+      var y = window.innerHeight * Math.random();
+
+      var robot = new Image();
+      robot.src = 'https://content.appboy.com/uploads/h5tFMDUK4XUNcQ9KVA01OQcreature.png';
+
+      window.addEventListener('resize', resizeCanvas, false);
+      window.requestAnimationFrame(draw);
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function draw(){
+        resizeCanvas();
+
+        if (x > canvas.width) { // if moves off the right
+          y = canvas.width * Math.random(); // randomize y re-entry
+          floatsRight = false; // float left
+        } else if (x < farLeft) {
+          y = canvas.width * Math.random();
+          floatsRight = true;
+        }
+
+        if (floatsRight) {
+          x += .75;
+          y += Math.sin(x/15);
+        } else if (!floatsRight) {
+          x -= .75;
+          y -= Math.sin(x/15);
+        }
+        console.log(x + " " + y);
+
+        context.drawImage(robot, x, y, 75, 70);
+        window.requestAnimationFrame(draw);
+      }
+    });
+
+  </script>
+
+
+</html>
