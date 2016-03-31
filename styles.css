@@ -97,23 +97,23 @@ p {
 
 .smiley {
   -webkit-user-select: none;
-    cursor: zoom-in;
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    top: 6px;
-    left: 0;
-    z-index: 100;
-    background-repeat: no-repeat;
-    background-size: 28px;
+  cursor: zoom-in;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  z-index: 100;
+  background-repeat: no-repeat;
+  background-size: 28px;
 }
 
 .sm-animated {
-  background-image: url(smiley.gif);
+  background-image: url(https://media.giphy.com/media/3o7WTQdTtIx7Ios6eA/giphy.gif);
 }
 
 .sm-static {
-  background-image: url(smiley_static.png);
+  background-image: url(https://content.appboy.com/uploads/aYLk7aLsP9HazvK5E_T9TQsmiley_static.png);
 }
 
 .slash {

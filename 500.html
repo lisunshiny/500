@@ -2,7 +2,150 @@
 <html>
   <head>
     <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/09c5f801-0d37-479d-aea3-ca82d9180c1e.css"/>
-    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+      html {
+        background: #1c222b;
+        color: white;
+        font-family: "Avenir Next Cyr W00 Ult Light";
+        text-align: center;
+      }
+
+      .clearfix:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      section {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 70px;
+        font-family: "AvenirNextLTW01-UltraLt_721293";
+        margin: 35px 0;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 20px 0;
+      }
+
+      .links {
+        list-style: none;
+        margin: auto;
+        margin-top: 0px;
+        padding: 0;
+        width: 312px;
+        display: block;
+
+      }
+
+      .links li {
+        float: left;
+        display: block;
+        margin-left: 20px;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          margin: 0;
+          font-size: 50px;
+        }
+
+        p {
+          margin-top: 20px;
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+
+        .links {
+          width: auto;
+        }
+
+        .links li {
+          float: none;
+          margin: auto;
+          padding: 0;
+          padding-top: 20px;
+          display: block;
+        }
+      }
+
+
+      .links a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .links a:hover {
+        text-decoration: underline;
+      }
+
+      .links li:first-child {
+        margin-left: 0;
+      }
+
+      .logo-container {
+        width: 162px;
+        height: 40px;
+        position: relative;
+        margin: auto;
+      }
+
+      .appboy-logo {
+        margin: 40px auto;
+        background-image: url(https://content.appboy.com/uploads/UYHXAmcQxu4txsuT25r7xQlogo_white_copy_2x.png);
+        width: 162px;
+        height: 40px;
+        background-size: 162px 40px;
+      }
+
+      .smiley {
+        -webkit-user-select: none;
+        cursor: zoom-in;
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        z-index: 100;
+        background-repeat: no-repeat;
+        background-size: 28px;
+      }
+
+      .sm-animated {
+        background-image: url(https://media.giphy.com/media/3o7WTQdTtIx7Ios6eA/giphy.gif);
+      }
+
+      .sm-static {
+        background-image: url(https://content.appboy.com/uploads/aYLk7aLsP9HazvK5E_T9TQsmiley_static_2x.png);
+      }
+
+      .slash {
+        color: #fff200;
+        position: absolute;
+        width: 350px;
+        left: -50px;
+        top: -425px;
+        z-index: -100;
+      }
+
+      .robot {
+        width: 50px;
+        height: 47px;
+        background-size: 50px 47px;
+        position: absolute;
+        z-index: 3;
+        background-image: url(https://content.appboy.com/uploads/-MPG60Axy0GKQypftHDjqAcreature_2x.png);
+      }
+
+      #canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+      }
+    </style>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <meta charset="utf-8">
 
