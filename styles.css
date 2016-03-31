@@ -104,6 +104,16 @@ p {
     top: 6px;
     left: 0;
     z-index: 100;
+    background-repeat: no-repeat;
+    background-size: 28px;
+}
+
+.sm-animated {
+  background-image: url(smiley.gif);
+}
+
+.sm-static {
+  background-image: url(smiley_static.png);
 }
 
 .slash {

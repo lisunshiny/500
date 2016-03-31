@@ -28,7 +28,9 @@
 
         </div>
         <div class="smiley-container">
-          <img class="smiley" src="smiley.gif">
+          <div class="smiley sm-animated">
+
+          </div>
         </div>
       </div>
     </section>
@@ -39,16 +41,16 @@
   <script type="text/javascript">
     $(function() {
       var smile = function() {
-        $(".smiley").attr("src", "smiley_static.png");
+        $(".smiley").removeClass("sm-animated").addClass("sm-static");
       };
       window.setTimeout(smile, 3500);
 
       $(".logo-container").mouseenter(function() {
         var smiley = $(".smiley");
-        if (smiley.attr("src") == "smiley.gif") {
+        if ($(".sm-animated").length !== 0) {
           return;
         }
-        smiley.attr("src", "smiley.gif")
+        $(".smiley").removeClass("sm-static").addClass("sm-animated");
         window.setTimeout(smile, 3000);
       })
     })
