@@ -19,7 +19,7 @@
 
       <ul class="links clearfix">
         <li><a href="https://twitter.com/appboy">@appboy</a></li>
-        <li><a href="http://status.appboy.com/">Appboy Status</a></li>
+        <li><a href="http://status.appboy.com/">Status</a></li>
         <li><a href="https://community.appboy.com/appboy">Community</a></li>
         <li><a href="mailto:support@appboy.com">Support</a></li>
       </ul>
@@ -66,7 +66,7 @@
       var y = window.innerHeight * Math.random();
 
       var robot = new Image();
-      robot.src = 'https://content.appboy.com/uploads/h5tFMDUK4XUNcQ9KVA01OQcreature.png';
+      robot.src = 'creature.png';
 
       window.addEventListener('resize', resizeCanvas, false);
       window.requestAnimationFrame(draw);
@@ -94,7 +94,6 @@
           x -= .75;
           y -= Math.sin(x/15);
         }
-        console.log(x + " " + y);
 
         context.drawImage(robot, x, y, 75, 70);
         window.requestAnimationFrame(draw);

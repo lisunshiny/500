@@ -30,7 +30,7 @@ p {
   margin: auto;
   margin-top: 0px;
   padding: 0;
-  width: 376px;
+  width: 312px;
   display: block;
 
 }
@@ -109,9 +109,9 @@ p {
 .slash {
   color: #fff200;
   position: absolute;
-  width: 500px;
+  width: 350px;
   left: -50px;
-  top: -800px;
+  top: -425px;
   z-index: -100;
 }
 
@@ -128,4 +128,5 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -100;
 }
